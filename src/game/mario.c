@@ -1277,6 +1277,9 @@ void update_mario_button_inputs(struct MarioState *m) {
     if (m->controller->buttonDown & A_BUTTON) {
         m->input |= INPUT_A_DOWN;
     }
+    if (m->controller->buttonPressed & L_TRIG) {
+        m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_LUIGI];
+    }
 
     // Don't update for these buttons if squished.
     if (m->squishTimer == 0) {
