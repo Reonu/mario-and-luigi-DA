@@ -40,3 +40,7 @@
 #include "spindrift/model.inc.c"
 #include "spindrift/anims/data.inc.c"
 #include "spindrift/anims/table.inc.c"
+
+#include "bully/model.inc.c"
+#include "bully/anims/data.inc.c"
+#include "bully/anims/table.inc.c"
