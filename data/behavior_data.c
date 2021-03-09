@@ -12,7 +12,7 @@
 #include "game/debug.h"
 #include "menu/file_select.h"
 #include "engine/surface_load.h"
-
+#include "actors/group0.h"
 #include "actors/common0.h"
 #include "actors/common1.h"
 #include "actors/group1.h"

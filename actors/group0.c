@@ -27,3 +27,7 @@
 #include "sparkle_animation/model.inc.c"
 
 #include "luigi/model.inc.c"
+
+#include "toad/model.inc.c"
+#include "toad/anims/data.inc.c"
+#include "toad/anims/table.inc.c"

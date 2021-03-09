@@ -25,6 +25,7 @@
 
 #define MODEL_MARIO                       0x01        // mario_geo
 #define MODEL_LUIGI                       0x02        // unused
+#define MODEL_TOAD                        0xFF        // toad_geo
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -558,7 +559,7 @@
 #define MODEL_METAL_BOX_DL                0xDA        // metal_box_dl
 #define MODEL_NUMBER                      0xDB        // number_geo
 #define MODEL_FLYGUY                      0xDC        // shyguy_geo
-#define MODEL_TOAD                        0xDD        // toad_geo
+
 #define MODEL_PEACH                       0xDE        // peach_geo
 #define MODEL_CHUCKYA                     0xDF        // chuckya_geo
 #define MODEL_WHITE_PUFF                  0xE0        // white_puff_geo
