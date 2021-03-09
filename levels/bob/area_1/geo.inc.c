@@ -32,7 +32,7 @@ const GeoLayout bob_area_1_geo[] = {
 		GEO_CLOSE_NODE(),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 4629, 2004, -13942, bob_dl_Mountains_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 28, 100, -37, bob_dl_PathMountainsDecorative_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 4816, 1698, -193, bob_dl_Toad_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 4816, 1698, -193, bob_dl_ToadTower_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -399, 4654, 15098, bob_dl_Volcano_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),

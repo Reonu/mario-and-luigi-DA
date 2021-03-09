@@ -4037,7 +4037,7 @@ Gfx bob_dl_PathMountainsDecorative_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx bob_dl_Toad_mesh_layer_1_vtx_cull[8] = {
+Vtx bob_dl_ToadTower_mesh_layer_1_vtx_cull[8] = {
 	{{{-1100, -1614, -960},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
 	{{{-1100, -1614, 957},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
 	{{{-1100, 993, 957},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
@@ -4048,7 +4048,7 @@ Vtx bob_dl_Toad_mesh_layer_1_vtx_cull[8] = {
 	{{{1095, 993, -960},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
 };
 
-Vtx bob_dl_Toad_mesh_layer_1_vtx_0[102] = {
+Vtx bob_dl_ToadTower_mesh_layer_1_vtx_0[102] = {
 	{{{238, 903, 447},0, {263, 1656},{0x10, 0x75, 0x2F, 0xFF}}},
 	{{{-6, 993, 36},0, {482, 2032},{0x0, 0x7F, 0x5, 0xFF}}},
 	{{{-243, 900, 454},0, {694, 1650},{0xE3, 0x75, 0x28, 0xFF}}},
@@ -4153,8 +4153,8 @@ Vtx bob_dl_Toad_mesh_layer_1_vtx_0[102] = {
 	{{{-418, -1614, -29},0, {648, -375},{0x81, 0x0, 0x6, 0xFF}}},
 };
 
-Gfx bob_dl_Toad_mesh_layer_1_tri_0[] = {
-	gsSPVertex(bob_dl_Toad_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx bob_dl_ToadTower_mesh_layer_1_tri_0[] = {
+	gsSPVertex(bob_dl_ToadTower_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 7, 8, 0, 9, 7, 6, 0),
 	gsSP2Triangles(10, 11, 12, 0, 11, 13, 12, 0),
@@ -4166,7 +4166,7 @@ Gfx bob_dl_Toad_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(23, 26, 25, 0, 26, 27, 25, 0),
 	gsSP2Triangles(26, 28, 27, 0, 28, 29, 27, 0),
 	gsSP2Triangles(28, 30, 29, 0, 30, 31, 29, 0),
-	gsSPVertex(bob_dl_Toad_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(bob_dl_ToadTower_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(2, 3, 4, 0, 3, 5, 4, 0),
 	gsSP2Triangles(2, 4, 6, 0, 7, 2, 6, 0),
@@ -4180,7 +4180,7 @@ Gfx bob_dl_Toad_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(25, 24, 26, 0, 27, 25, 26, 0),
 	gsSP2Triangles(27, 26, 28, 0, 29, 27, 28, 0),
 	gsSP2Triangles(30, 27, 29, 0, 31, 30, 29, 0),
-	gsSPVertex(bob_dl_Toad_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(bob_dl_ToadTower_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -4194,7 +4194,7 @@ Gfx bob_dl_Toad_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(23, 26, 25, 0, 26, 27, 25, 0),
 	gsSP2Triangles(26, 28, 27, 0, 28, 29, 27, 0),
 	gsSP2Triangles(28, 30, 29, 0, 30, 31, 29, 0),
-	gsSPVertex(bob_dl_Toad_mesh_layer_1_vtx_0 + 96, 6, 0),
+	gsSPVertex(bob_dl_ToadTower_mesh_layer_1_vtx_0 + 96, 6, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 4, 5, 3, 0),
 	gsSPEndDisplayList(),
@@ -4907,13 +4907,13 @@ Gfx bob_dl_PathMountainsDecorative_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx bob_dl_Toad_mesh_layer_1[] = {
+Gfx bob_dl_ToadTower_mesh_layer_1[] = {
 	gsSPClearGeometryMode(G_LIGHTING),
-	gsSPVertex(bob_dl_Toad_mesh_layer_1_vtx_cull + 0, 8, 0),
+	gsSPVertex(bob_dl_ToadTower_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
 	gsSPDisplayList(mat_bob_dl_Material02_f3d),
-	gsSPDisplayList(bob_dl_Toad_mesh_layer_1_tri_0),
+	gsSPDisplayList(bob_dl_ToadTower_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bob_dl_Material02_f3d),
 	gsSPEndDisplayList(),
 };

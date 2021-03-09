@@ -43,6 +43,8 @@ const LevelScript level_bob_entry[] = {
 		WARP_NODE(0xFF, LEVEL_CCM, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_HMC_WOODEN_DOOR, -3258, 103, -20, 0, 90, 0, 0x00000000, bhvDoor),
 		OBJECT(MODEL_HMC_WOODEN_DOOR, -3025, 102, 4207, 0, 126, 0, 0x00000000, bhvDoor),
+		OBJECT(0xFF, -1896, 102, -1330, 0, 0, 0, 0x00000000, bhvToadMessage),
+		OBJECT(MODEL_FLYGUY, -1327, 102, -2367, 0, 0, 0, 0x00000000, bhvFlyGuy),
 		OBJECT(MODEL_NONE, 0, 200, 0, 0, 0, 0, 0x000A0000, bhvSpinAirborneWarp),
 		MARIO_POS(0x01, 0, -178, 102, -5959),
 		TERRAIN(bob_area_1_collision),
