@@ -548,14 +548,14 @@ void check_instant_warp(void) {
             if (warp->id != 0) {
                 //gMarioState->area->camera->yaw = cameraAngle;
                 
-                warp_camera((-1 * (gMarioState->pos[0])), -1 * ((gMarioState->pos[1])), -1 * ((gMarioState->pos[2])));
+                warp_camera((-1 * (gMarioState->pos[0])), -1 * ((gMarioState->pos[1])), -10000 - ((gMarioState->pos[2])));
                 cameraAngle = gMarioState->area->camera->yaw;
                 gMarioState->pos[0] = 0;
                 gMarioState->pos[1] = 0;
-                gMarioState->pos[2] = 0;
+                gMarioState->pos[2] = -10000;
                 gMarioState->marioObj->oPosX = 0;
                 gMarioState->marioObj->oPosY = 0;
-                gMarioState->marioObj->oPosZ = 0;
+                gMarioState->marioObj->oPosZ = -10000;
                 //gMarioState->faceAngle[1] = 0;
                 //gMarioObject->oFaceAngleYaw = 0;
 
@@ -746,14 +746,19 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 break;
 
             case WARP_OP_WARP_FLOOR:
-                sSourceWarpNodeId = WARP_NODE_WARP_FLOOR;
-                if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
-                    if (m->numLives == 0) {
-                        sDelayedWarpOp = WARP_OP_GAME_OVER;
-                    } else {
-                        sSourceWarpNodeId = WARP_NODE_DEATH;
-                    }
+                if (m->floor->type != SURFACE_DEATH_PLANE) {
+                    sSourceWarpNodeId = m->floor->force;
                 }
+                else{
+                    sSourceWarpNodeId = WARP_NODE_WARP_FLOOR;
+                    if (area_get_warp_node(sSourceWarpNodeId) == NULL) {
+                        if (m->numLives == 0) {
+                            sDelayedWarpOp = WARP_OP_GAME_OVER;
+                        } else {
+                            sSourceWarpNodeId = WARP_NODE_DEATH;
+                        }
+                    }
+                    }
                 sDelayedWarpTimer = 20;
                 play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x14, 0x00, 0x00, 0x00);
                 break;
@@ -1286,6 +1291,7 @@ s32 lvl_set_current_level(UNUSED s16 arg0, s32 levelNum) {
     sWarpCheckpointActive = FALSE;
     gCurrLevelNum = levelNum;
     gCurrCourseNum = gLevelToCourseNumTable[levelNum - 1];
+	if (gCurrLevelNum == LEVEL_CCM) return 0;
 	if (gCurrLevelNum == LEVEL_BOB) return 0;
 
     if (gCurrDemoInput != NULL || gCurrCreditsEntry != NULL || gCurrCourseNum == COURSE_NONE) {
