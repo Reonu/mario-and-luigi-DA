@@ -44,3 +44,6 @@
 #include "bully/model.inc.c"
 #include "bully/anims/data.inc.c"
 #include "bully/anims/table.inc.c"
+#include "luiginpc/model.inc.c"
+#include "luiginpc/anims/data.inc.c"
+#include "luiginpc/anims/table.inc.c"

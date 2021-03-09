@@ -427,4 +427,8 @@ extern const struct Animation *const bully_seg5_anims_0500470C[];
 
 #include "mario/geo_header.h"
 
+#include "luiginpc/geo_header.h"
+
+
+#include "luiginpc/anim_header.h"
 #endif

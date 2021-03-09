@@ -24,13 +24,14 @@
 /* Global models that are loaded for every level */
 
 #define MODEL_MARIO                       0x01        // mario_geo
-#define MODEL_LUIGI                       0x02        // unused
+#define MODEL_LUIGI                       0x02        // very much used thank you
 #define MODEL_TOAD                        0xFF        // toad_geo
 #define MODEL_SPINDRIFT                   0xFE        // spindrift_geo
 #define MODEL_MR_BLIZZARD_HIDDEN          0xFD        // mr_blizzard_hidden_geo
 #define MODEL_MR_BLIZZARD                 0xFC        // mr_blizzard_geo
 #define MODEL_BULLY                       0xFB        // bully_geo
 #define MODEL_BULLY_BOSS                  0xFA        // bully_boss_geo
+#define MODEL_LUIGINPC                    0xF9        // luigi NPC
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
