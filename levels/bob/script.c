@@ -44,7 +44,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_HMC_WOODEN_DOOR, -3258, 103, -20, 0, 90, 0, 0x00000000, bhvDoor),
 		OBJECT(MODEL_HMC_WOODEN_DOOR, -3025, 102, 4207, 0, 126, 0, 0x00000000, bhvDoor),
 		OBJECT(MODEL_NONE, 0, 200, 0, 0, 0, 0, 0x000A0000, bhvSpinAirborneWarp),
-		MARIO_POS(0x01, 0, 0, 200, 0),
+		MARIO_POS(0x01, 0, -178, 102, -5959),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_STREAMED_APLACEINTHESUN),
@@ -60,7 +60,7 @@ const LevelScript level_bob_entry[] = {
 	END_AREA(),
 
 	FREE_LEVEL_POOL(),
-	MARIO_POS(0x01, 0, 0, 200, 0),
+	MARIO_POS(0x01, 0, -178, 102, -5959),
 	CALL(0, lvl_init_or_update),
 	CALL_LOOP(1, lvl_init_or_update),
 	CLEAR_LEVEL(),

@@ -15,7 +15,8 @@ struct ObjectHitbox sBreakableBoxHitbox = {
 void breakable_box_init(void) {
     o->oHiddenObjectUnkF4 = NULL;
     o->oAnimState = 1;
-    switch (o->oBehParams2ndByte) {
+    cur_obj_scale(1.5f);
+    /*switch (o->oBehParams2ndByte) {
         case 0:
             o->oNumLootCoins = 0;
             break;
@@ -28,7 +29,7 @@ void breakable_box_init(void) {
         case 3:
             cur_obj_scale(1.5f);
             break;
-    }
+    }*/
 }
 
 void hidden_breakable_box_actions(void) {
@@ -52,12 +53,12 @@ void hidden_breakable_box_actions(void) {
         cur_obj_become_tangible();
         if (cur_obj_wait_then_blink(360, 20))
             o->oAction = 0;
-        if (cur_obj_was_attacked_or_ground_pounded()) {
+        /*if (cur_obj_was_attacked_or_ground_pounded()) {
             spawn_mist_particles();
             spawn_triangle_break_particles(30, 138, 3.0f, 4);
             o->oAction++;
             cur_obj_play_sound_2(SOUND_GENERAL_BREAK_BOX);
-        }
+        }*/
         load_object_collision_model();
     } else {
         cur_obj_become_intangible();
@@ -92,8 +93,5 @@ void hidden_unbreakable_box_actions(void) {
 }
 
 void bhv_hidden_object_loop(void) {
-    if (o->oBehParams2ndByte == 0)
-        hidden_breakable_box_actions(); // Confused, that function has code depending on the action
-    else
-        hidden_unbreakable_box_actions();
+        hidden_breakable_box_actions();
 }

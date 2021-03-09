@@ -59,7 +59,7 @@ const LevelScript level_ccm_entry[] = {
 
 	AREA(2, ccm_area_2),
 		OBJECT(MODEL_BREAKABLE_BOX, -241, 439, -7642, 0, 0, 0, 0x00000000, bhvHiddenObject),
-		OBJECT(MODEL_BREAKABLE_BOX, 69, 0, -7642, 0, 0, 0, 0x00000000, bhvHiddenObject),
+		OBJECT(MODEL_BREAKABLE_BOX, 69, 0, -7642, 0, 0, 0, 0x00050000, bhvHiddenObject),
 		OBJECT(MODEL_GOOMBA, -471, 0, -8032, 0, 0, 0, 0x00000000, bhvGoomba),
 		OBJECT(MODEL_PURPLE_SWITCH, 504, 0, -8518, 0, 0, 0, 0x00000000, bhvFloorSwitchHiddenObjects),
 		TERRAIN(ccm_area_2_collision),
