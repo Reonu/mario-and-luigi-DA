@@ -51,6 +51,7 @@ const LevelScript level_bob_entry[] = {
 	END_AREA(),
 
 	AREA(2, bob_area_2),
+		INSTANT_WARP(0x00, 0x01, 0, 0, 0),
 		TERRAIN(bob_area_2_collision),
 		MACRO_OBJECTS(bob_area_2_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),

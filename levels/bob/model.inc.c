@@ -54,6 +54,10 @@ Lights1 bob_dl_Volcano_rock_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
+Lights1 bob_dl_warp_001_lights = gdSPDefLights1(
+	0x7F, 0x7F, 0x7F,
+	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
+
 Gfx bob_dl_SUPER_MARIO_64_5C403031_0_2_all_ci8_aligner[] = {gsSPEndDisplayList()};
 u8 bob_dl_SUPER_MARIO_64_5C403031_0_2_all_ci8[] = {
 	0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 
@@ -4322,25 +4326,49 @@ Gfx bob_dl_Volcano_mesh_layer_1_tri_0[] = {
 };
 
 Vtx bob_dl_Plane_002_mesh_layer_1_vtx_cull[8] = {
-	{{{-1017, 0, -1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
-	{{{-1017, 0, 1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
-	{{{-1017, 0, 1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
-	{{{-1017, 0, -1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
-	{{{1017, 0, -1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
-	{{{1017, 0, 1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
-	{{{1017, 0, 1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
-	{{{1017, 0, -1017},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{-7542, 0, -7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{-7542, 0, 7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{-7542, 0, 7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{-7542, 0, -7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7542, 0, -7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7542, 0, 7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7542, 0, 7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{7542, 0, -7542},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
 };
 
 Vtx bob_dl_Plane_002_mesh_layer_1_vtx_0[4] = {
-	{{{-1017, 0, 1017},0, {-16, 1008},{0x0, 0x7F, 0x0, 0xFF}}},
-	{{{1017, 0, 1017},0, {1008, 1008},{0x0, 0x7F, 0x0, 0xFF}}},
-	{{{1017, 0, -1017},0, {1008, -16},{0x0, 0x7F, 0x0, 0xFF}}},
-	{{{-1017, 0, -1017},0, {-16, -16},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-7542, 0, 7542},0, {-16, 1008},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{7542, 0, 7542},0, {1008, 1008},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{7542, 0, -7542},0, {1008, -16},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-7542, 0, -7542},0, {-16, -16},{0x0, 0x7F, 0x0, 0xFF}}},
 };
 
 Gfx bob_dl_Plane_002_mesh_layer_1_tri_0[] = {
 	gsSPVertex(bob_dl_Plane_002_mesh_layer_1_vtx_0 + 0, 4, 0),
+	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx bob_dl_Plane_003_mesh_layer_1_vtx_cull[8] = {
+	{{{-100, 0, -100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{-100, 0, 100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{-100, 0, 100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{-100, 0, -100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{100, 0, -100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{100, 0, 100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{100, 0, 100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+	{{{100, 0, -100},0, {-16, -16},{0x0, 0x0, 0x0, 0x0}}},
+};
+
+Vtx bob_dl_Plane_003_mesh_layer_1_vtx_0[4] = {
+	{{{-100, 0, 100},0, {-16, 1008},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{100, 0, 100},0, {1008, 1008},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{100, 0, -100},0, {1008, -16},{0x0, 0x7F, 0x0, 0xFF}}},
+	{{{-100, 0, -100},0, {-16, -16},{0x0, 0x7F, 0x0, 0xFF}}},
+};
+
+Gfx bob_dl_Plane_003_mesh_layer_1_tri_0[] = {
+	gsSPVertex(bob_dl_Plane_003_mesh_layer_1_vtx_0 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSPEndDisplayList(),
 };
@@ -4669,6 +4697,14 @@ Gfx mat_revert_bob_dl_Volcano_rock[] = {
 	gsSPEndDisplayList(),
 };
 
+Gfx mat_bob_dl_warp_001[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPSetLights1(bob_dl_warp_001_lights),
+	gsSPEndDisplayList(),
+};
+
 Gfx bob_dl_Fountain_mesh_layer_1[] = {
 	gsSPClearGeometryMode(G_LIGHTING),
 	gsSPVertex(bob_dl_Fountain_mesh_layer_1_vtx_cull + 0, 8, 0),
@@ -4938,6 +4974,16 @@ Gfx bob_dl_Plane_002_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bob_dl_f3d_material_002),
 	gsSPDisplayList(bob_dl_Plane_002_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bob_dl_f3d_material_002),
+	gsSPEndDisplayList(),
+};
+
+Gfx bob_dl_Plane_003_mesh_layer_1[] = {
+	gsSPClearGeometryMode(G_LIGHTING),
+	gsSPVertex(bob_dl_Plane_003_mesh_layer_1_vtx_cull + 0, 8, 0),
+	gsSPSetGeometryMode(G_LIGHTING),
+	gsSPCullDisplayList(0, 7),
+	gsSPDisplayList(mat_bob_dl_warp_001),
+	gsSPDisplayList(bob_dl_Plane_003_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
