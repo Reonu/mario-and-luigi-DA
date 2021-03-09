@@ -20,3 +20,7 @@
 #include "luigi/geo.inc.c"
 
 #include "toad/geo.inc.c"
+
+#include "spindrift/geo.inc.c"
+
+#include "snowman/geo.inc.c"

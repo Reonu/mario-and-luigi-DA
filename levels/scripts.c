@@ -114,6 +114,10 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_CARTOON_STAR,            cartoon_star_geo),
     LOAD_MODEL_FROM_GEO(MODEL_LUIGI,                   luigi_geo),
     LOAD_MODEL_FROM_GEO(MODEL_TOAD,                    toad_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_SPINDRIFT,               spindrift_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_MR_BLIZZARD,             mr_blizzard_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_MR_BLIZZARD_HIDDEN,      mr_blizzard_hidden_geo),
+
     FREE_LEVEL_POOL(),
     CALL(/*arg*/ 0, /*func*/ lvl_init_from_save_file),
     LOOP_BEGIN(),

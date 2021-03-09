@@ -31,3 +31,12 @@
 #include "toad/model.inc.c"
 #include "toad/anims/data.inc.c"
 #include "toad/anims/table.inc.c"
+
+
+#include "snowman/model.inc.c"
+#include "snowman/anims/data.inc.c"
+#include "snowman/anims/table.inc.c"
+
+#include "spindrift/model.inc.c"
+#include "spindrift/anims/data.inc.c"
+#include "spindrift/anims/table.inc.c"

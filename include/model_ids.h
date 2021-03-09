@@ -26,6 +26,9 @@
 #define MODEL_MARIO                       0x01        // mario_geo
 #define MODEL_LUIGI                       0x02        // unused
 #define MODEL_TOAD                        0xFF        // toad_geo
+#define MODEL_SPINDRIFT                   0xFE        // spindrift_geo
+#define MODEL_MR_BLIZZARD_HIDDEN          0xFD        // mr_blizzard_hidden_geo
+#define MODEL_MR_BLIZZARD                 0xFC        // mr_blizzard_geo
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -374,9 +377,8 @@
 #define MODEL_FWOOSH                      0x57        // fwoosh_geo
 
 // group 7
-#define MODEL_SPINDRIFT                   0x54        // spindrift_geo
-#define MODEL_MR_BLIZZARD_HIDDEN          0x55        // mr_blizzard_hidden_geo
-#define MODEL_MR_BLIZZARD                 0x56        // mr_blizzard_geo
+
+
 #define MODEL_PENGUIN                     0x57        // penguin_geo
 
 // group 8
