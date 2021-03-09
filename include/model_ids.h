@@ -32,6 +32,7 @@
 #define MODEL_BULLY                       0xFB        // bully_geo
 #define MODEL_BULLY_BOSS                  0xFA        // bully_boss_geo
 #define MODEL_LUIGINPC                    0xF9        // luigi NPC
+#define MODEL_BITS_WARP_PIPE              0xF8
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -253,7 +254,6 @@
 #define MODEL_BITS_STAIRCASE_FRAME2               0x43        // bits_geo_0006D0
 #define MODEL_BITS_STAIRCASE_FRAME3               0x44        // bits_geo_0006E8
 #define MODEL_BITS_STAIRCASE_FRAME4               0x45        // bits_geo_000700
-#define MODEL_BITS_WARP_PIPE                      0x49        // warp_pipe_geo
 
 // lll
 #define MODEL_LLL_DRAWBRIDGE_PART                 0x38        // lll_geo_000B20

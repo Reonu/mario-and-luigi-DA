@@ -4,4 +4,7 @@
 #include "levels/ccm/area_2/collision.inc.c"
 #include "levels/ccm/area_2/macro.inc.c"
 #include "levels/ccm/area_2/spline.inc.c"
+#include "levels/ccm/area_3/collision.inc.c"
+#include "levels/ccm/area_3/macro.inc.c"
+#include "levels/ccm/area_3/spline.inc.c"
 #include "levels/ccm/model.inc.c"
