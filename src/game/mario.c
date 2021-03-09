@@ -1720,6 +1720,17 @@ void func_sh_8025574C(void) {
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
 
+    if (gCurrentArea->index % 2 == 0) {
+        if (o->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_MARIO]){
+            o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_LUIGI];
+        }
+    }
+    else {
+        if (o->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_LUIGI]) {
+            o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO];
+        }
+    }
+
     if (gMarioState->action) {
         gMarioState->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
         mario_reset_bodystate(gMarioState);
