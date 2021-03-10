@@ -558,13 +558,8 @@ void check_instant_warp(void) {
                 gMarioState->marioObj->oPosZ = -10000;
                 //gMarioState->faceAngle[1] = 0;
                 //gMarioObject->oFaceAngleYaw = 0;
-
-                
-
                 change_area(warp->area);
                 gMarioState->area = gCurrentArea;
-
-
                 
             }
         }
