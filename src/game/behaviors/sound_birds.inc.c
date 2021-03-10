@@ -1,20 +1,19 @@
 // sound_birds.inc.c
 
 void bhv_birds_sound_loop(void) {
-    if (gCamera->mode == CAMERA_MODE_BEHIND_MARIO)
-        return;
-
-    switch (o->oBehParams2ndByte) {
-        case 0:
-            cur_obj_play_sound_1(SOUND_OBJ2_BIRD_CHIRP1);
-            break;
-
-        case 1:
-            cur_obj_play_sound_1(SOUND_GENERAL2_BIRD_CHIRP2);
-            break;
-
-        case 2:
-            cur_obj_play_sound_1(SOUND_OBJ_BIRD_CHIRP3);
-            break;
+    if (o->oTimer == 0) {
+        if (gCurrLevelNum == LEVEL_CCM){
+            cutscene_object(CUTSCENE_BEHIND, o);
+        }
     }
+    if (o->oTimer < 2000) {
+        gMarioState->pos[2] = -10000;
+    }
+    if (gMarioState->faceAngle[1] > 10000) {
+        gMarioState->faceAngle[1] = 10000;
+    }
+    if (gMarioState->faceAngle[1] < -10000) {
+        gMarioState->faceAngle[1] = -10000;
+    }
+    gMarioState->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
 }

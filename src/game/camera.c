@@ -10938,6 +10938,27 @@ struct CutsceneSplinePoint sVolcanoCreditsSplinePositions[] = {
     { -1, 0, { 1274, 473, -275 } }
 };
 
+BAD_RETURN(s32) cutscene_behind(struct Camera *c) {
+
+    vec3f_set_dist_and_angle(gMarioState->pos, c->pos, 2000, 0x500, DEGREES(180));
+    //if (gCutsceneTimer == 399) {
+
+    //}
+
+}
+BAD_RETURN(s32) cutscene_behind2(struct Camera *c) {
+
+    if (gCutsceneTimer == 1999) {
+        
+    }
+
+}
+
+struct Cutscene sCutsceneBehind[] = {
+    { cutscene_behind, 1 },
+    { cutscene_behind2, 2000 },
+};
+
 struct CutsceneSplinePoint sVolcanoCreditsSplineFocus[] = {
     { 0, 50, { -1500, 757, 1251 } },
     { 0, 50, { -1401, 439, 431 } },
@@ -11210,6 +11231,7 @@ void play_cutscene(struct Camera *c) {
         CUTSCENE(CUTSCENE_RACE_DIALOG, sCutsceneDialog)
         CUTSCENE(CUTSCENE_ENTER_PYRAMID_TOP, sCutsceneEnterPyramidTop)
         CUTSCENE(CUTSCENE_SSL_PYRAMID_EXPLODE, sCutscenePyramidTopExplode)
+        CUTSCENE(CUTSCENE_BEHIND, sCutsceneBehind)
     }
 
 #undef CUTSCENE

@@ -15,7 +15,16 @@ void bhv_bowser_bomb_loop(void) {
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
     }
 
-    set_object_visibility(o, 7000);
+    if (o->oTimer >= o->oBehParams) {
+        o->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
+        o->oPosZ = o->oPosZ - 65;
+    }
+    else {
+        o->header.gfx.node.flags |= GRAPH_RENDER_INVISIBLE;
+    }
+    if (o->oPosZ < -15000) {
+        obj_mark_for_deletion(o);
+    }
 }
 
 void bhv_bowser_bomb_explosion_loop(void) {
