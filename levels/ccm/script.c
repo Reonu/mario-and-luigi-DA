@@ -54,7 +54,7 @@ const LevelScript level_ccm_entry[] = {
 		OBJECT(MODEL_NONE, 8, -135, -10074, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
 		TERRAIN(ccm_area_1_collision),
 		MACRO_OBJECTS(ccm_area_1_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_STREAMED_XENO2),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
 		TERRAIN_TYPE(TERRAIN_SNOW),
 	END_AREA(),
 

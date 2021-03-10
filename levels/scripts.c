@@ -121,6 +121,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_BULLY_BOSS,              bully_boss_geo),
     LOAD_MODEL_FROM_GEO(MODEL_LUIGINPC,                luiginpc_geo),
     LOAD_MODEL_FROM_GEO(MODEL_BITS_WARP_PIPE,          warp_pipe_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_BOWSER_BOMB,             bowser_bomb_geo),
 
 
     FREE_LEVEL_POOL(),

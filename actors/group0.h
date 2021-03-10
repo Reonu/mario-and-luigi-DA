@@ -423,6 +423,15 @@ extern const Gfx bully_seg5_dl_05003F80[];
 extern const Gfx bully_seg5_dl_05003FC8[];
 extern const struct Animation *const bully_seg5_anims_0500470C[];
 
+
+//bomb
+extern const GeoLayout bowser_bomb_geo[];
+extern const Gfx bomb_seg6_dl_0605A7C0[];
+extern const Gfx bomb_seg6_dl_0605A7F8[];
+extern const Gfx bomb_seg6_dl_0605A830[];
+extern const Gfx bomb_seg6_dl_0605A8A8[];
+extern const Gfx bomb_seg6_dl_0605A9C0[];
+
 #include "luigi/geo_header.h"
 
 #include "mario/geo_header.h"

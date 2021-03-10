@@ -47,3 +47,5 @@
 #include "luiginpc/model.inc.c"
 #include "luiginpc/anims/data.inc.c"
 #include "luiginpc/anims/table.inc.c"
+
+#include "bomb/model.inc.c"
