@@ -440,4 +440,6 @@ extern const Gfx bomb_seg6_dl_0605A9C0[];
 
 
 #include "luiginpc/anim_header.h"
+#include "green_spring/geo_header.h"
+
 #endif

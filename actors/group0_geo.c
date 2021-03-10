@@ -31,3 +31,4 @@
 #include "luiginpc/geo.inc.c"
 
 #include "bomb/geo.inc.c"
+#include "green_spring/geo.inc.c"

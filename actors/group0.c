@@ -49,3 +49,4 @@
 #include "luiginpc/anims/table.inc.c"
 
 #include "bomb/model.inc.c"
+#include "green_spring/model.inc.c"

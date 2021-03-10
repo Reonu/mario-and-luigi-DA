@@ -34,6 +34,7 @@
 #define MODEL_LUIGINPC                    0xF9        // luigi NPC
 #define MODEL_BITS_WARP_PIPE              0xF8
 #define MODEL_BOWSER_BOMB                 0xF7        // bowser_bomb_geo
+#define MODEL_GREEN_SPRING                0xF6        // green spring
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
