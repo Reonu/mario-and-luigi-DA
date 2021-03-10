@@ -85,7 +85,7 @@ extern Gfx ccm_dl_Plane_001_mesh_layer_1_tri_2[];
 extern Vtx ccm_dl_Plane_001_mesh_layer_1_vtx_3[79];
 extern Gfx ccm_dl_Plane_001_mesh_layer_1_tri_3[];
 extern Vtx ccm_dl_Plane_002_mesh_layer_1_vtx_cull[8];
-extern Vtx ccm_dl_Plane_002_mesh_layer_1_vtx_0[181];
+extern Vtx ccm_dl_Plane_002_mesh_layer_1_vtx_0[169];
 extern Gfx ccm_dl_Plane_002_mesh_layer_1_tri_0[];
 extern Vtx ccm_dl_Plane_002_mesh_layer_1_vtx_1[4];
 extern Gfx ccm_dl_Plane_002_mesh_layer_1_tri_1[];

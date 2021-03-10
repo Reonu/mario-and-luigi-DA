@@ -32,3 +32,5 @@
 
 #include "bomb/geo.inc.c"
 #include "green_spring/geo.inc.c"
+#include "yellow_spring/geo.inc.c"
+#include "red_spring/geo.inc.c"

@@ -50,3 +50,5 @@
 
 #include "bomb/model.inc.c"
 #include "green_spring/model.inc.c"
+#include "yellow_spring/model.inc.c"
+#include "red_spring/model.inc.c"
