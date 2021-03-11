@@ -269,6 +269,10 @@ void bhv_goomba_update(void) {
 
     f32 animSpeed;
 
+    if (gCurrAreaIndex == 5) {
+        o->oPosX = 0; 
+    }
+
     if (obj_update_standard_actions(o->oGoombaScale)) {
         // If this goomba has a spawner and mario moved away from the spawner,
         // unload

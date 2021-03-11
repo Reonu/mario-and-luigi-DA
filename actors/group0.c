@@ -52,3 +52,8 @@
 #include "green_spring/model.inc.c"
 #include "yellow_spring/model.inc.c"
 #include "red_spring/model.inc.c"
+
+#include "chillychief/model.inc.c"
+#include "chillychief/anims/data.inc.c"
+#include "chillychief/geo.inc.c"
+#include "chillychief/anims/table.inc.c"

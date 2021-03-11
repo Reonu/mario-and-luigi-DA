@@ -1174,7 +1174,7 @@ void mode_8_directions_camera(struct Camera *c) {
     s16 oldAreaYaw = sAreaYaw;
 
     radial_camera_input(c, 0.f);
-
+/*
     if (gPlayer1Controller->buttonPressed & R_CBUTTONS) {
         s8DirModeYawOffset += DEGREES(45);
         play_sound_cbutton_side();
@@ -1183,7 +1183,7 @@ void mode_8_directions_camera(struct Camera *c) {
         s8DirModeYawOffset -= DEGREES(45);
         play_sound_cbutton_side();
     }
-
+*/
     lakitu_zoom(400.f, 0x900);
     c->nextYaw = update_8_directions_camera(c, c->focus, pos);
     c->pos[0] = pos[0];
@@ -10940,7 +10940,7 @@ struct CutsceneSplinePoint sVolcanoCreditsSplinePositions[] = {
 
 BAD_RETURN(s32) cutscene_behind(struct Camera *c) {
 
-    vec3f_set_dist_and_angle(gMarioState->pos, c->pos, 2000, 0x500, DEGREES(180));
+    vec3f_set_dist_and_angle(gMarioState->pos, c->pos, 2000, 0x900, DEGREES(180));
     //if (gCutsceneTimer == 399) {
 
     //}
@@ -10956,7 +10956,7 @@ BAD_RETURN(s32) cutscene_behind2(struct Camera *c) {
 
 struct Cutscene sCutsceneBehind[] = {
     { cutscene_behind, 1 },
-    { cutscene_behind2, 2000 },
+    { cutscene_behind2, 99999 },
 };
 
 struct CutsceneSplinePoint sVolcanoCreditsSplineFocus[] = {

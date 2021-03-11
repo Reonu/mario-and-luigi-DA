@@ -33,6 +33,14 @@ void bhv_recovery_heart_loop(void) {
         gMarioStates[0].healCounter += 4;
         o->oSpinningHeartTotalSpin -= 0x10000;
     }
-
+    if (o->oBehParams != 0) {
+        if (o->oTimer >= o->oBehParams) {
+            o->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
+            o->oPosZ = o->oPosZ - 65;
+        }
+        else {
+            o->header.gfx.node.flags |= GRAPH_RENDER_INVISIBLE;
+        }
+    }
     o->oFaceAngleYaw += o->oAngleVelYaw;
 }
