@@ -1,33 +1,32 @@
 #include "src/game/envfx_snow.h"
 
-const GeoLayout ccm_area_3_geo[] = {
+const GeoLayout ccm_area_6_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 5195, 1189, -7205, ccm_dl_Mountains_004_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -4594, 1189, -8479, ccm_dl_Mountains_005_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -171, -10000, ccm_dl_Plane_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -9119, -3541, 10025, ccm_dl_Mountain_006_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 0, 10000, ccm_dl_Plane_007_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout ccm_area_3[] = {
+const GeoLayout ccm_area_6[] = {
 	GEO_NODE_SCREEN_AREA(10, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT/2),
 	GEO_OPEN_NODE(),
 		GEO_ZBUFFER(0),
 		GEO_OPEN_NODE(),
 			GEO_NODE_ORTHO(100.0000),
 			GEO_OPEN_NODE(),
-				GEO_BACKGROUND_COLOR(0xFFFF),
+				GEO_BACKGROUND(BACKGROUND_FLAMING_SKY, geo_skybox_main),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_ZBUFFER(1),
 		GEO_OPEN_NODE(),
 			GEO_CAMERA_FRUSTUM_WITH_FUNC(45.0000, 100, 30000, geo_camera_fov),
 			GEO_OPEN_NODE(),
-				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, -1284, 644, 91169, -1284, 544, 91169, geo_camera_main),
+				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 0, 0, 222835, 0, -100, 222835, geo_camera_main),
 				GEO_OPEN_NODE(),
-					GEO_BRANCH(1, ccm_area_3_geo),
+					GEO_BRANCH(1, ccm_area_6_geo),
 					GEO_RENDER_OBJ(),
-					GEO_ASM(ENVFX_SNOW_BLIZZARD, geo_envfx_main),
+					GEO_ASM(ENVFX_LAVA_BUBBLES, geo_envfx_main),
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),

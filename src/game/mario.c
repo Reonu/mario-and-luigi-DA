@@ -1742,7 +1742,7 @@ s32 execute_mario_action(UNUSED struct Object *o) {
         if (gMarioState->floor == NULL) {
             return 0;
         }
-        if (gCurrAreaIndex == 5) {
+        if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
             gMarioState->pos[0] = 0;
         }
         // The function can loop through many action shifts in one frame,

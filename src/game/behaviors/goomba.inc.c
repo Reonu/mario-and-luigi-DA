@@ -269,7 +269,7 @@ void bhv_goomba_update(void) {
 
     f32 animSpeed;
 
-    if (gCurrAreaIndex == 5) {
+    if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 5)) {
         o->oPosX = 0; 
     }
 

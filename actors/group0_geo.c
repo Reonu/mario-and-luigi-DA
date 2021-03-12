@@ -30,6 +30,7 @@
 
 #include "luiginpc/geo.inc.c"
 
+#include "chillychief/geo.inc.c"
 #include "bomb/geo.inc.c"
 #include "green_spring/geo.inc.c"
 #include "yellow_spring/geo.inc.c"

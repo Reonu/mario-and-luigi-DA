@@ -406,7 +406,7 @@ void init_mario_after_warp(void) {
     }
 
     reset_camera(gCurrentArea->camera);
-    if (gCurrAreaIndex == 5) {
+    if ((gCurrAreaIndex == 5) || gCurrAreaIndex == 6) {
         s8DirModeBaseYaw = 0x4000;
     }
     else{
@@ -562,7 +562,7 @@ void check_instant_warp(void) {
                 cameraAngle = gMarioState->area->camera->yaw;
                 gMarioState->pos[0] = 0;
                 gMarioState->pos[1] = 0;
-                if (gCurrAreaIndex == 5){
+                if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)){
                     gMarioState->pos[2] = 10000;
                 }
                 else {
@@ -576,7 +576,7 @@ void check_instant_warp(void) {
                 //gMarioObject->oFaceAngleYaw = 0;
                 change_area(warp->area);
                 gMarioState->area = gCurrentArea;
-                if (gCurrAreaIndex == 5) {
+                if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
                     reset_camera(gCurrentArea->camera);
                     s8DirModeBaseYaw = 0x4000;
                 }

@@ -432,6 +432,22 @@ extern const Gfx bomb_seg6_dl_0605A830[];
 extern const Gfx bomb_seg6_dl_0605A8A8[];
 extern const Gfx bomb_seg6_dl_0605A9C0[];
 
+// chillychief
+extern const Gfx chilly_chief_seg6_dl_06002B30[];
+extern const Gfx chilly_chief_seg6_dl_06002BC8[];
+extern const Gfx chilly_chief_seg6_dl_06002C60[];
+extern const Gfx chilly_chief_seg6_dl_06002D18[];
+extern const Gfx chilly_chief_seg6_dl_06002D50[];
+extern const Gfx chilly_chief_seg6_dl_06002D88[];
+extern const Gfx chilly_chief_seg6_dl_06002E80[];
+extern const Gfx chilly_chief_seg6_dl_06002EB8[];
+extern const Gfx chilly_chief_seg6_dl_06002EF0[];
+extern const Gfx chilly_chief_seg6_dl_06002FC8[];
+extern const Gfx chilly_chief_seg6_dl_06003010[];
+extern const GeoLayout chilly_chief_geo[];
+extern const GeoLayout chilly_chief_big_geo[];
+extern const struct Animation *const chilly_chief_seg6_anims_06003994[];
+
 #include "luigi/geo_header.h"
 
 #include "mario/geo_header.h"

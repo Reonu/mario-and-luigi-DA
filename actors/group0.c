@@ -55,5 +55,4 @@
 
 #include "chillychief/model.inc.c"
 #include "chillychief/anims/data.inc.c"
-#include "chillychief/geo.inc.c"
 #include "chillychief/anims/table.inc.c"

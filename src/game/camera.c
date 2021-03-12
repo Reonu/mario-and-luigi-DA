@@ -1174,16 +1174,16 @@ void mode_8_directions_camera(struct Camera *c) {
     s16 oldAreaYaw = sAreaYaw;
 
     radial_camera_input(c, 0.f);
-/*
-    if (gPlayer1Controller->buttonPressed & R_CBUTTONS) {
+
+    if ((gPlayer1Controller->buttonPressed & R_CBUTTONS) && (gCurrLevelNum == LEVEL_BOB)) {
         s8DirModeYawOffset += DEGREES(45);
         play_sound_cbutton_side();
     }
-    if (gPlayer1Controller->buttonPressed & L_CBUTTONS) {
+    if ((gPlayer1Controller->buttonPressed & L_CBUTTONS) && (gCurrLevelNum == LEVEL_BOB)) {
         s8DirModeYawOffset -= DEGREES(45);
         play_sound_cbutton_side();
     }
-*/
+
     lakitu_zoom(400.f, 0x900);
     c->nextYaw = update_8_directions_camera(c, c->focus, pos);
     c->pos[0] = pos[0];
@@ -6550,7 +6550,7 @@ s16 camera_course_processing(struct Camera *c) {
     }
 
     // Area-specific camera processing
-    if (!(sStatusFlags & CAM_FLAG_BLOCK_AREA_PROCESSING)) {
+    /*if (!(sStatusFlags & CAM_FLAG_BLOCK_AREA_PROCESSING)) {
         switch (gCurrLevelArea) {
             case AREA_WF:
                 if (sMarioCamState->action == ACT_RIDING_HOOT) {
@@ -6656,7 +6656,7 @@ s16 camera_course_processing(struct Camera *c) {
                 gLakituState.defMode = CAMERA_MODE_FREE_ROAM;
                 break;
         }
-    }
+    }*/
 
     sStatusFlags &= ~CAM_FLAG_BLOCK_AREA_PROCESSING;
     if (oldMode == CAMERA_MODE_C_UP) {

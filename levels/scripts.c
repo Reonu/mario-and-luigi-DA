@@ -125,6 +125,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_GREEN_SPRING,            green_spring_geo),
     LOAD_MODEL_FROM_GEO(MODEL_YELLOW_SPRING,           yellow_spring_geo),
     LOAD_MODEL_FROM_GEO(MODEL_RED_SPRING,              red_spring_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_CHILL_BULLY,             chilly_chief_geo),
 
 
     FREE_LEVEL_POOL(),
@@ -348,8 +349,6 @@ const LevelScript script_func_global_16[] = {
 };
 
 const LevelScript script_func_global_17[] = {
-    LOAD_MODEL_FROM_GEO(MODEL_CHILL_BULLY,             chilly_chief_geo),
-    LOAD_MODEL_FROM_GEO(MODEL_BIG_CHILL_BULLY,         chilly_chief_big_geo),
     LOAD_MODEL_FROM_GEO(MODEL_MONEYBAG,                moneybag_geo),
     RETURN(),
 };

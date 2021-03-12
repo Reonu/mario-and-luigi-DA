@@ -37,6 +37,7 @@
 #define MODEL_GREEN_SPRING                0xF6        // green spring
 #define MODEL_YELLOW_SPRING               0xF5        // green spring
 #define MODEL_RED_SPRING                  0xF4        // green spring
+#define MODEL_CHILL_BULLY                 0xF3        // ice bully
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -449,7 +450,6 @@
 #define MODEL_LAKITU                      0x66        // lakitu_geo
 
 // group 16
-#define MODEL_CHILL_BULLY                 0x64        // chilly_chief_geo
 #define MODEL_BIG_CHILL_BULLY             0x65        // chilly_chief_big_geo
 #define MODEL_MONEYBAG                    0x66        // moneybag_geo
 
