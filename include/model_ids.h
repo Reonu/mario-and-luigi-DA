@@ -38,6 +38,7 @@
 #define MODEL_YELLOW_SPRING               0xF5        // green spring
 #define MODEL_RED_SPRING                  0xF4        // green spring
 #define MODEL_CHILL_BULLY                 0xF3        // ice bully
+#define MODEL_WOODEN_SIGNPOST             0xF2        // wooden_signpost_geo
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
@@ -469,7 +470,7 @@
 #define MODEL_TRANSPARENT_STAR            0x79        // transparent_star_geo
 #define MODEL_STAR                        0x7A        // star_geo
 #define MODEL_TTM_SLIDE_EXIT_PODIUM       0x7B        // ttm_geo_000DF4
-#define MODEL_WOODEN_SIGNPOST             0x7C        // wooden_signpost_geo
+
 #define MODEL_UNKNOWN_7D                  0x7D        // referenced in macro presets. Unknown usage
 // find me
 #define MODEL_CANNON_BARREL               0x7F        // cannon_barrel_geo

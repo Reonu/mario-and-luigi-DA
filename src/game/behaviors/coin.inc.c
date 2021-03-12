@@ -39,6 +39,9 @@ void bhv_yellow_coin_init(void) {
 void bhv_yellow_coin_loop(void) {
     bhv_coin_sparkles_init();
     o->oAnimState++;
+    if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
+        o->oPosX = 0;
+    }
 }
 
 void bhv_temp_coin_loop(void) {
@@ -46,6 +49,9 @@ void bhv_temp_coin_loop(void) {
     if (cur_obj_wait_then_blink(200, 20))
         obj_mark_for_deletion(o);
     bhv_coin_sparkles_init();
+    if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
+        o->oPosX = 0;
+    }
 }
 
 void bhv_coin_init(void) {
@@ -63,6 +69,9 @@ void bhv_coin_loop(void) {
     cur_obj_update_floor_and_walls();
     cur_obj_if_hit_wall_bounce_away();
     cur_obj_move_standard(-62);
+    if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
+        o->oPosX = 0;
+    }
     if ((sp1C = o->oFloor) != NULL) {
         if (o->oMoveFlags & OBJ_MOVE_ON_GROUND)
             o->oSubAction = 1;
