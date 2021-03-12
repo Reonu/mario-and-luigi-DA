@@ -224,7 +224,9 @@ void bhv_bully_loop(void) {
     //  with Mario even when it is under a lava floor, this can get the bully stuck OOB
     //  if there is nothing under the lava floor.
     bully_check_mario_collision();
-
+    if (gCurrAreaIndex == 5) {
+        o->oPosX = 0;
+    }
     switch (o->oAction) {
         case BULLY_ACT_PATROL:
             o->oForwardVel = 5.0;

@@ -406,7 +406,13 @@ void init_mario_after_warp(void) {
     }
 
     reset_camera(gCurrentArea->camera);
-    s8DirModeBaseYaw = 0x8000;
+    if (gCurrAreaIndex == 5) {
+        s8DirModeBaseYaw = 0x4000;
+    }
+    else{
+        s8DirModeBaseYaw = 0x8000;
+    }
+    
     sWarpDest.type = WARP_TYPE_NOT_WARPING;
     sDelayedWarpOp = WARP_OP_NONE;
 
@@ -556,7 +562,13 @@ void check_instant_warp(void) {
                 cameraAngle = gMarioState->area->camera->yaw;
                 gMarioState->pos[0] = 0;
                 gMarioState->pos[1] = 0;
-                gMarioState->pos[2] = -10000;
+                if (gCurrAreaIndex == 5){
+                    gMarioState->pos[2] = 10000;
+                }
+                else {
+                    gMarioState->pos[2] = -10000;
+                }
+                
                 gMarioState->marioObj->oPosX = 0;
                 gMarioState->marioObj->oPosY = 0;
                 gMarioState->marioObj->oPosZ = -10000;

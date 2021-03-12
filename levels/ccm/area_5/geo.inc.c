@@ -3,7 +3,9 @@
 const GeoLayout ccm_area_5_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 242, 0, -10000, ccm_dl_Plane_004_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -6016, 1694, 8098, ccm_dl_Mountains_003_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 128, 0, 7238, ccm_dl_Plane_004_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(4, 128, 0, 7238, ccm_dl_Plane_006_mesh_layer_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -29,6 +31,7 @@ const GeoLayout ccm_area_5[] = {
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
+		GEO_DISPLAY_LIST(4, ccm_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(1, ccm_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),

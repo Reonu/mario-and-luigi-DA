@@ -417,8 +417,8 @@ static void mr_blizzard_snowball_act_1(void) {
     if (o->parentObj->prevObj == NULL) {
         if (o->parentObj->oAction == MR_BLIZZARD_ACT_THROW_SNOWBALL) {
             marioDist = o->oDistanceToMario;
-            if (marioDist > 2000.0f) {
-                marioDist = 2000.0f;
+            if (marioDist > 1000.0f) {
+                marioDist = 1000.0f;
             }
 
             // Launch the snowball relative to Mario's distance from the snowball.
