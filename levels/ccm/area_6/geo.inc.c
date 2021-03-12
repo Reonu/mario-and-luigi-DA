@@ -3,8 +3,17 @@
 const GeoLayout ccm_area_6_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 824, 3365, ccm_dl_Cube_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 924, 2980, ccm_dl_Cube_001_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 1174, 2599, ccm_dl_Cube_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 4062, 3365, ccm_dl_Cube_003_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 4062, 3965, ccm_dl_Cube_004_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 4062, 4565, ccm_dl_Cube_005_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, -9119, -3541, 10025, ccm_dl_Mountain_006_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 0, 10000, ccm_dl_Plane_007_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -9119, -3541, 1521, ccm_dl_Mountain_007_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -9119, -3541, -8817, ccm_dl_Mountain_008_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -70, 10815, ccm_dl_Plane_007_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -70, 10815, ccm_dl_Plane_008_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

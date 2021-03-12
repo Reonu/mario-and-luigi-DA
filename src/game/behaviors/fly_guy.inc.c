@@ -192,7 +192,9 @@ void bhv_fly_guy_update(void) {
         // Oscillate up and down
         o->oFlyGuyOscTimer += 1;
         o->oPosY += coss(0x400 * o->oFlyGuyOscTimer) * 1.5f;
-
+        if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
+            o->oPosX = 0; 
+        }
         switch (o->oAction) {
             case FLY_GUY_ACT_IDLE:
                 fly_guy_act_idle();

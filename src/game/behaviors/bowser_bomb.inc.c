@@ -14,8 +14,8 @@ void bhv_bowser_bomb_loop(void) {
         set_camera_shake_from_point(SHAKE_POS_LARGE, o->oPosX, o->oPosY, o->oPosZ);
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
     }
-
-    if (o->oTimer >= o->oBehParams) {
+    if (o->oBehParams != 0) {
+        if (o->oTimer >= o->oBehParams) {
         o->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
         o->oPosZ = o->oPosZ - 65;
     }
@@ -25,6 +25,8 @@ void bhv_bowser_bomb_loop(void) {
     if (o->oPosZ < -15000) {
         obj_mark_for_deletion(o);
     }
+    }
+
 }
 
 void bhv_bowser_bomb_explosion_loop(void) {
