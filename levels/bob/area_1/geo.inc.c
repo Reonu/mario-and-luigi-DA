@@ -30,6 +30,7 @@ const GeoLayout bob_area_1_geo[] = {
 				GEO_TRANSLATE_NODE_WITH_DL(4, -559, 466, 392, bob_dl_Window_017_mesh_layer_4),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 28, 100, -37, bob_dl_MainTerrain_001_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 4629, 2004, -13942, bob_dl_Mountains_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 28, 100, -37, bob_dl_PathMountainsDecorative_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 4816, 1698, -193, bob_dl_ToadTower_mesh_layer_1),
@@ -61,8 +62,8 @@ const GeoLayout bob_area_1[] = {
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(1, bob_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, bob_dl_material_revert_render_settings),
-		GEO_DISPLAY_LIST(5, bob_dl_material_revert_render_settings),
 		GEO_DISPLAY_LIST(4, bob_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(5, bob_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

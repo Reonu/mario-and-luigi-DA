@@ -647,6 +647,11 @@ s32 act_star_dance(struct MarioState *m) {
     if (m->actionState != 2 && m->actionTimer >= 40) {
         m->marioBodyState->handState = MARIO_HAND_PEACE_SIGN;
     }
+    if (gCurrAreaIndex == 7) {
+        if (m->actionTimer >= 20){
+            m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_LUIGI];
+        }
+    }
     stop_and_set_height_to_floor(m);
     return FALSE;
 }

@@ -22,7 +22,7 @@ Power Stars!\n\
 You and Luigi will \n\
 have to get one each\n\
 at the same time.\n\
-We neeed them NOW!\n\
+We need them NOW!\n\
 You'll go to the\n\
 Snowy Mountains \n\
 and Luigi'll go\n\
