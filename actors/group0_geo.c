@@ -36,3 +36,4 @@
 #include "yellow_spring/geo.inc.c"
 #include "red_spring/geo.inc.c"
 #include "snow_boulder/geo.inc.c"
+#include "toad2/geo.inc.c"

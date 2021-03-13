@@ -57,3 +57,6 @@
 #include "chillychief/anims/data.inc.c"
 #include "chillychief/anims/table.inc.c"
 #include "snow_boulder/model.inc.c"
+#include "toad2/model.inc.c"
+#include "toad2/anims/data.inc.c"
+#include "toad2/anims/table.inc.c"

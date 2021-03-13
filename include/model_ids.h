@@ -25,7 +25,7 @@
 
 #define MODEL_MARIO                       0x01        // mario_geo
 #define MODEL_LUIGI                       0x02        // very much used thank you
-#define MODEL_TOAD                        0xFF        // toad_geo
+#define MODEL_TOAD2                       0xFF        // toad_geo
 #define MODEL_SPINDRIFT                   0xFE        // spindrift_geo
 #define MODEL_MR_BLIZZARD_HIDDEN          0xFD        // mr_blizzard_hidden_geo
 #define MODEL_MR_BLIZZARD                 0xFC        // mr_blizzard_geo
@@ -40,6 +40,7 @@
 #define MODEL_CHILL_BULLY                 0xF3        // ice bully
 #define MODEL_WOODEN_SIGNPOST             0xF2        // wooden_signpost_geo
 #define MODEL_SNOW_BOULDER                0xF1        // wooden_signpost_geo
+#define MODEL_TOAD                        0xF0        // wooden_signpost_geo
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 

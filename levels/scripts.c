@@ -113,7 +113,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_DIRT_ANIMATION,          dirt_animation_geo),
     LOAD_MODEL_FROM_GEO(MODEL_CARTOON_STAR,            cartoon_star_geo),
     LOAD_MODEL_FROM_GEO(MODEL_LUIGI,                   luigi_geo),
-    LOAD_MODEL_FROM_GEO(MODEL_TOAD,                    toad_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_TOAD2,                   toad2_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SPINDRIFT,               spindrift_geo),
     LOAD_MODEL_FROM_GEO(MODEL_MR_BLIZZARD,             mr_blizzard_geo),
     LOAD_MODEL_FROM_GEO(MODEL_MR_BLIZZARD_HIDDEN,      mr_blizzard_hidden_geo),
@@ -127,6 +127,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_RED_SPRING,              red_spring_geo),
     LOAD_MODEL_FROM_GEO(MODEL_CHILL_BULLY,             chilly_chief_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SNOW_BOULDER,            snow_boulder_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_TOAD,                    toad_geo),
 
 
     FREE_LEVEL_POOL(),
