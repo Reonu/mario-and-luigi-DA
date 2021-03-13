@@ -580,6 +580,11 @@ void check_instant_warp(void) {
                     reset_camera(gCurrentArea->camera);
                     s8DirModeBaseYaw = 0x4000;
                 }
+                if (gCurrAreaIndex == 7) {
+                    reset_camera(gCurrentArea->camera);
+                    gMarioState->pos[2] = -10000;
+                    s8DirModeBaseYaw = 0x8000;
+                }
 
                 
             }

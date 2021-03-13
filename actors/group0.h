@@ -462,4 +462,6 @@ extern const struct Animation *const chilly_chief_seg6_anims_06003994[];
 
 #include "red_spring/geo_header.h"
 
+#include "snow_boulder/geo_header.h"
+
 #endif

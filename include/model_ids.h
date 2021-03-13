@@ -39,6 +39,7 @@
 #define MODEL_RED_SPRING                  0xF4        // green spring
 #define MODEL_CHILL_BULLY                 0xF3        // ice bully
 #define MODEL_WOODEN_SIGNPOST             0xF2        // wooden_signpost_geo
+#define MODEL_SNOW_BOULDER                0xF1        // wooden_signpost_geo
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
