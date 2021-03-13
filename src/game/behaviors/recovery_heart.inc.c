@@ -36,7 +36,7 @@ void bhv_recovery_heart_loop(void) {
     if (o->oBehParams != 0) {
         if (o->oTimer >= o->oBehParams) {
             o->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
-            o->oPosZ = o->oPosZ - 65;
+            o->oPosZ = o->oPosZ - 50;
         }
         else {
             o->header.gfx.node.flags |= GRAPH_RENDER_INVISIBLE;

@@ -3,8 +3,7 @@
 const GeoLayout bob_area_2_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -43, 0, 2, bob_dl_Plane_002_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -1124, 93, -982, bob_dl_Plane_003_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, -9000, -10000, bob_dl_Plane_008_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

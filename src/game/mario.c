@@ -1277,9 +1277,6 @@ void update_mario_button_inputs(struct MarioState *m) {
     if (m->controller->buttonDown & A_BUTTON) {
         m->input |= INPUT_A_DOWN;
     }
-    if (m->controller->buttonPressed & L_TRIG) {
-        m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_LUIGI];
-    }
 
     // Don't update for these buttons if squished.
     if (m->squishTimer == 0) {
@@ -1719,7 +1716,7 @@ void func_sh_8025574C(void) {
  */
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
-
+if (gCurrLevelNum != LEVEL_ENDING) {
     if (gCurrentArea->index % 2 == 0) {
         if (o->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_MARIO]){
             o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_LUIGI];
@@ -1730,6 +1727,8 @@ s32 execute_mario_action(UNUSED struct Object *o) {
             o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO];
         }
     }
+}
+
 
     if (gMarioState->action) {
         gMarioState->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;

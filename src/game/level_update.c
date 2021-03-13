@@ -586,6 +586,7 @@ void check_instant_warp(void) {
                     s8DirModeBaseYaw = 0x8000;
                 }
 
+
                 
             }
         }

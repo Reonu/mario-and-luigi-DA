@@ -18,49 +18,31 @@
 
 DEFINE_DIALOG(DIALOG_000, 1, 6, 30, 200, _("\
 Mario! We've lost two\n\
-important things!\n\
-Story is a WIP! \n\
-You will go to the snow\n\
-area and Luigi will go\n\
-to the lava area"))
+Power Stars!\n\
+You and Luigi will \n\
+have to get one each\n\
+at the same time.\n\
+We neeed them NOW!\n\
+You'll go to the\n\
+Snowy Mountains \n\
+and Luigi'll go\n\
+to the Hot Volcano.\n\
+"))
 
 DEFINE_DIALOG(DIALOG_001, 1, 4, 95, 200, _("\
-Hey Mario! I'm so scared!\n\
-Why do I get the lava level?"))
+Hey Mario!! Why do I\n\
+get the lava level?\n\
+I'm so scared!"))
 
 DEFINE_DIALOG(DIALOG_002, 1, 4, 95, 200, _("\
-Hey, you! It's dangerous\n\
-ahead, so listen up! Take\n\
-my advice.\n\
-\n\
-Cross the two\n\
-bridges ahead, then\n\
-watch for falling\n\
-water bombs.\n\
-The Big Bob-omb at the\n\
-top of the mountain is\n\
-very powerful--don't let\n\
-him grab you!\n\
-We're Bob-omb Buddies,\n\
-and we're on your side.\n\
-You can talk to us\n\
-whenever you'd like to!"))
+I'd love to let you\n\
+enter the Toad Tower\n\
+but we couldn't get\n\
+it open on time!"))
 
-DEFINE_DIALOG(DIALOG_003, 1, 5, 95, 200, _("\
-Thank you, Mario! The Big\n\
-Bob-omb is nothing but a\n\
-big dud now! But the\n\
-battle for the castle has\n\
-just begun.\n\
-Other enemies are holding\n\
-the other Power Stars. If\n\
-you recover more Stars,\n\
-you can open new doors\n\
-that lead to new worlds!\n\
-My Bob-omb Buddies are\n\
-waiting for you. Be sure\n\
-to talk to them--they'll\n\
-set up cannons for you."))
+DEFINE_DIALOG(DIALOG_003, 1, 2, 95, 200, _("\
+I hope you like\n\
+wallkicks."))
 
 DEFINE_DIALOG(DIALOG_004, 1, 3, 95, 200, _("\
 We're peace-loving\n\
