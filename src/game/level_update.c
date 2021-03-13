@@ -593,6 +593,7 @@ void check_instant_warp(void) {
     }
 }
 
+
 s16 music_changed_through_warp(s16 arg) {
     struct ObjectWarpNode *warpNode = area_get_warp_node(arg);
     s16 levelNum = warpNode->node.destLevel & 0x7F;

@@ -85,8 +85,8 @@ out.\n\
 \n\
 Special thanks to\n\
 anonymousmoose,\n\
-wiseguy and cowquack.\n\
-\n\
+Wiseguy, CowQuack\n\
+and MrComit\n\
 \n\
 Thanks to Sour OG\n\
 for porting the betah\n\

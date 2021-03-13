@@ -639,6 +639,38 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
     }
 }
 
+void activate_instant_warp(s32 id) {
+    s16 cameraAngle;
+    struct Object *obj;
+    struct InstantWarp *warp = &gCurrentArea->instantWarps[id];
+
+    if (warp->id != 0) {
+        gMarioState->pos[0] += warp->displacement[0];
+        gMarioState->pos[1] += warp->displacement[1];
+        gMarioState->pos[2] += warp->displacement[2];
+
+        obj = cur_obj_nearest_object_with_behavior(bhvCelebrationStar);
+        if (obj != NULL) {
+            obj->oHomeX += warp->displacement[0];
+            obj->oHomeY += warp->displacement[1];
+            obj->oHomeZ += warp->displacement[2];
+        }
+
+        gMarioState->marioObj->oPosX = gMarioState->pos[0];
+        gMarioState->marioObj->oPosY = gMarioState->pos[1];
+        gMarioState->marioObj->oPosZ = gMarioState->pos[2];
+
+        cameraAngle = gMarioState->area->camera->yaw;
+
+        change_area(warp->area);
+        gMarioState->area = gCurrentArea;
+
+        warp_camera(warp->displacement[0], warp->displacement[1], warp->displacement[2]);
+
+        gMarioState->area->camera->yaw = cameraAngle;
+    }
+}
+
 s32 act_star_dance(struct MarioState *m) {
     m->faceAngle[1] = m->area->camera->yaw;
     set_mario_animation(m, m->actionState == 2 ? MARIO_ANIM_RETURN_FROM_STAR_DANCE
@@ -648,6 +680,9 @@ s32 act_star_dance(struct MarioState *m) {
         m->marioBodyState->handState = MARIO_HAND_PEACE_SIGN;
     }
     if (gCurrAreaIndex == 7) {
+        if (m->actionTimer == 20){
+            activate_instant_warp(0);
+        }
         if (m->actionTimer >= 20){
             m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_LUIGI];
         }

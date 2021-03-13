@@ -4,6 +4,7 @@ const GeoLayout ccm_area_7_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 0, -10000, ccm_dl_Plane_008_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -2686, 0, -10000, ccm_dl_Plane_012_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
