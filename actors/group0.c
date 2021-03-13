@@ -60,3 +60,6 @@
 #include "toad2/model.inc.c"
 #include "toad2/anims/data.inc.c"
 #include "toad2/anims/table.inc.c"
+#include "luiginpcbye/model.inc.c"
+#include "luiginpcbye/anims/data.inc.c"
+#include "luiginpcbye/anims/table.inc.c"

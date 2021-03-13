@@ -41,6 +41,7 @@
 #define MODEL_WOODEN_SIGNPOST             0xF2        // wooden_signpost_geo
 #define MODEL_SNOW_BOULDER                0xF1        // wooden_signpost_geo
 #define MODEL_TOAD                        0xF0        // wooden_signpost_geo
+#define MODEL_LUIGINPCBYE                 0xEF        // wooden_signpost_geo
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 

@@ -128,6 +128,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_CHILL_BULLY,             chilly_chief_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SNOW_BOULDER,            snow_boulder_geo),
     LOAD_MODEL_FROM_GEO(MODEL_TOAD,                    toad_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_LUIGINPCBYE,             luiginpcbye_geo),
 
 
     FREE_LEVEL_POOL(),

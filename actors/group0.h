@@ -468,4 +468,8 @@ extern const struct Animation *const chilly_chief_seg6_anims_06003994[];
 
 
 #include "toad2/anim_header.h"
+#include "luiginpcbye/geo_header.h"
+
+
+#include "luiginpcbye/anim_header.h"
 #endif
