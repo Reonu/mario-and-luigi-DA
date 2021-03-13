@@ -1,6 +1,6 @@
 void scroll_ccm_dl_Plane_001_mesh_layer_1_vtx_1() {
 	int i = 0;
-	int count = 20;
+	int count = 17;
 	int width = 64 * 0x20;
 	int height = 32 * 0x20;
 
