@@ -91,6 +91,21 @@ and MrComit\n\
 Thanks to Sour OG\n\
 for porting the betah\n\
 Luigi model. \n\
+\n\
+\n\
+Music credits:\n\
+Paper Mario - Toad Town\n\
+by ShrooboidBrat\n\
+Bomberman Hero - Redial\n\
+by EDark\n\
+This hack was made with\n\
+decomp for the Mario\n\
+Jams comp by Axollyon\n\
+Check it out on Twitter:\n\
+MarioHackJams\n\
+There will also be a\n\
+website in the future\n\
+at mariojams.com\n\
 I hope you enjoy the\n\
 hack!"))
 
