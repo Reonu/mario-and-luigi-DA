@@ -14,17 +14,39 @@ void bhv_bowser_bomb_loop(void) {
         set_camera_shake_from_point(SHAKE_POS_LARGE, o->oPosX, o->oPosY, o->oPosZ);
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
     }
-    if (o->oBehParams != 0) {
+    if (o->oBehParams > 5) {
         if (o->oTimer >= o->oBehParams) {
         o->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
         o->oPosZ = o->oPosZ - 65;
+        }
+        else {
+            o->header.gfx.node.flags |= GRAPH_RENDER_INVISIBLE;
     }
-    else {
-        o->header.gfx.node.flags |= GRAPH_RENDER_INVISIBLE;
+        if (o->oPosZ < -15000) {
+            obj_mark_for_deletion(o);
+        }
     }
-    if (o->oPosZ < -15000) {
-        obj_mark_for_deletion(o);
+    if (o->oBehParams == 2) {
+        if (o->oTimer < 60) {
+            o->oPosX += 15;
+        }
+        else if (o->oTimer < 120) {
+            o->oPosX -= 15;
+        }
+        else {
+            o->oTimer = -1;
+        }
     }
+    if (o->oBehParams == 4) {
+        if (o->oTimer < 60) {
+            o->oPosX -= 15;
+        }
+        else if (o->oTimer < 120) {
+            o->oPosX += 15;
+        }
+        else {
+            o->oTimer = -1;
+        }
     }
 
 }

@@ -1728,7 +1728,7 @@ if (gCurrLevelNum != LEVEL_ENDING) {
         }
     }
 }
-
+extern s16 s8DirModeBaseYaw;
 
     if (gMarioState->action) {
         gMarioState->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
@@ -1742,7 +1742,33 @@ if (gCurrLevelNum != LEVEL_ENDING) {
             return 0;
         }
         if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
-            gMarioState->pos[0] = 0;
+            if (!(gMarioState->action & ACT_FLAG_HANGING) && !(gMarioState->action & ACT_READING_SIGN)){
+                gMarioState->pos[0] = 0;
+                if ((gMarioState->faceAngle[1] < 0x4000) && (gMarioState->faceAngle[1] > -0x4000)){
+                    gMarioState->faceAngle[1] = 0;
+                    gMarioState->marioBodyState->torsoAngle[1] = 0;
+                    gMarioState->marioBodyState->torsoAngle[2] = 0;
+                }
+                else {
+                    gMarioState->faceAngle[1] = 0x8000;
+                    gMarioState->marioBodyState->torsoAngle[1] = 0;
+                    gMarioState->marioBodyState->torsoAngle[2] = 0;
+                }
+                if (gMarioState->action == ACT_WALKING) {
+                        if (analog_stick_held_back() && gMarioState->forwardVel < 16.0f && gMarioState->forwardVel > -16.0f) {
+                        if (!(gMarioState->action == ACT_TURNING_AROUND)) {
+                            //set_mario_action(gMarioState, ACT_TURNING_AROUND, 0);
+                            if ((gMarioState->faceAngle[1] < 0x4000) && (gMarioState->faceAngle[1] > -0x4000)){
+                                gMarioState->faceAngle[1] = 0x8000;
+                            }
+                            else {
+                                gMarioState->faceAngle[1] = 0;
+                            }
+
+                        }
+                    }
+                }
+            }
         }
         // The function can loop through many action shifts in one frame,
         // which can lead to unexpected sub-frame behavior. Could potentially hang

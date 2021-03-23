@@ -14,6 +14,7 @@ void bhv_green_spring_loop(void) {
     if (o->oAction == 1) {
         if (o->oTimer < 4) {
             o->header.gfx.scale[1] -= 0.125f;
+            gMarioState->action = ACT_DOUBLE_JUMP;
         }
         else if (o->oTimer < 8) {
             o->header.gfx.scale[1] += 0.125f;
