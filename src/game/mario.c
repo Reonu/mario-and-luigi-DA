@@ -1742,7 +1742,7 @@ extern s16 s8DirModeBaseYaw;
             return 0;
         }
         if ((gCurrAreaIndex == 5) || (gCurrAreaIndex == 6)) {
-            if (!(gMarioState->action & ACT_FLAG_HANGING) && !(gMarioState->action & ACT_READING_SIGN)){
+            if (!(gMarioState->action & ACT_FLAG_HANGING) && !(gMarioState->action == ACT_READING_SIGN)){
                 gMarioState->pos[0] = 0;
                 if ((gMarioState->faceAngle[1] < 0x4000) && (gMarioState->faceAngle[1] > -0x4000)){
                     gMarioState->faceAngle[1] = 0;

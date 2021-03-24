@@ -2259,13 +2259,13 @@ void render_pause_my_score_coins(void) {
 #ifdef VERSION_EU
         print_generic_string(48, 157, gTextCourseArr[gInGameLanguage]);
 #else
-        print_generic_string(63, 157, textCourse);
+        //print_generic_string(63, 157, textCourse);
 #endif
         int_to_str(gCurrCourseNum, strCourseNum);
 #ifdef VERSION_EU
         print_generic_string(get_string_width(gTextCourseArr[gInGameLanguage]) + 51, 157, strCourseNum);
 #else
-        print_generic_string(CRS_NUM_X1, 157, strCourseNum);
+        //print_generic_string(CRS_NUM_X1, 157, strCourseNum);
 #endif
 
         actName = segmented_to_virtual(actNameTbl[(gCurrCourseNum - 1) * 6 + gDialogCourseActNum - 1]);
