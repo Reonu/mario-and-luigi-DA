@@ -2201,7 +2201,11 @@ void render_pause_my_score_coins(void) {
     u8 textCourse[] = { TEXT_COURSE };
     u8 textMyScore[] = { TEXT_MY_SCORE };
     u8 textCurrRatio43[] = { TEXT_HUD_CURRENT_RATIO_43 };
+    u8 textCurrRatio1610[] = { TEXT_HUD_CURRENT_RATIO_1610 };
     u8 textCurrRatio169[] = { TEXT_HUD_CURRENT_RATIO_169 };
+    u8 textCurrRatio219[] = { TEXT_HUD_CURRENT_RATIO_219 };
+    u8 textWideInfo[] = { TEXT_HUD_WIDE_INFO };
+    u8 textWideInfo2[] = { TEXT_HUD_WIDE_INFO2 };
 #endif
     u8 textStar[] = { TEXT_STAR };
     u8 textUnfilledStar[] = { TEXT_UNFILLED_STAR };
@@ -2269,13 +2273,26 @@ void render_pause_my_score_coins(void) {
         print_generic_string(get_string_width(gTextCourseArr[gInGameLanguage]) + 51, 157, strCourseNum);
 #else
         //print_generic_string(CRS_NUM_X1, 157, strCourseNum);
-        if (widescreen == 0) {
-            print_generic_string(10, 20, textCurrRatio43);
+        switch (widescreen) {
+            case 0:
+                print_generic_string(10, 20, textCurrRatio43);
+                break;
+            case 1:
+                print_generic_string(10, 20, textCurrRatio1610);
+                print_generic_string(10, 80, textWideInfo);
+                print_generic_string(10, 60, textWideInfo2);
+                break;
+            case 2:
+                print_generic_string(10, 20, textCurrRatio169);
+                print_generic_string(10, 80, textWideInfo);
+                print_generic_string(10, 60, textWideInfo2);
+                break;
+            case 3:
+                print_generic_string(10, 20, textCurrRatio219);
+                print_generic_string(10, 80, textWideInfo);
+                print_generic_string(10, 60, textWideInfo2);
+                break;
         }
-        else {
-            print_generic_string(10, 20, textCurrRatio169);
-        }
-        
 #endif
 
 
@@ -2638,12 +2655,7 @@ s16 render_pause_courses_and_castle(void) {
             render_pause_my_score_coins();
             render_pause_red_coins();
         if (gPlayer1Controller->buttonPressed & L_TRIG){
-                if (widescreen == 0){
-                    widescreen = 1;
-                }
-                else{
-                    widescreen = 0;
-                }
+                widescreen = (widescreen + 1) % 4;
             }
             /*if (gMarioStates[0].action & ACT_FLAG_PAUSE_EXIT) {
                 render_pause_course_options(99, 93, &gDialogLineNum, 15);

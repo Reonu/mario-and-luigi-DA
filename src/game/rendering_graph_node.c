@@ -64,6 +64,7 @@ s16 gCurrAnimFrame;
 f32 gCurAnimTranslationMultiplier;
 u16 *gCurrAnimAttribute;
 s16 *gCurAnimData;
+f32 aspect;
 
 struct AllocOnlyPool *gDisplayListHeap;
 
@@ -248,12 +249,19 @@ static void geo_process_perspective(struct GraphNodePerspective *node) {
 #ifdef VERSION_EU
         f32 aspect = ((f32) gCurGraphNodeRoot->width / (f32) gCurGraphNodeRoot->height) * 1.1f;
 #else   
-        f32 aspect;
-        if (widescreen == 1){
-            aspect = 1.775f;
-        }
-        else{
-            aspect = 1.33333f;
+        switch (widescreen) {
+        case 0:
+            aspect = 4.0f / 3.0f;
+            break;
+        case 1:
+            aspect = 16.0f / 10.0f;
+            break;
+        case 2:
+            aspect = 16.0f / 9.0f;
+            break;
+        case 3:
+            aspect = 21.0f / 9.0f;
+            break;
         }
         
 #endif
@@ -764,7 +772,7 @@ static s32 obj_is_in_view(struct GraphNodeObject *node, Mat4 matrix) {
     // ! @bug The aspect ratio is not accounted for. When the fov value is 45,
     // the horizontal effective fov is actually 60 degrees, so you can see objects
     // visibly pop in or out at the edge of the screen.
-    halfFov = (gCurGraphNodeCamFrustum->fov / 2.0f + 1.0f) * 32768.0f / 180.0f + 0.5f;
+    halfFov = ((gCurGraphNodeCamFrustum->fov*aspect) / 2.0f + 1.0f) * 32768.0f / 180.0f + 0.5f;
 
     hScreenEdge = -matrix[3][2] * sins(halfFov) / coss(halfFov);
     // -matrix[3][2] is the depth, which gets multiplied by tan(halfFov) to get
