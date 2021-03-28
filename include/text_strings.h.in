@@ -24,6 +24,8 @@
 // Ingame Menu
 #define TEXT_PAUSE _("PAUSE") // Pause text, Castle Courses
 #define TEXT_HUD_CONGRATULATIONS _("CONGRATULATIONS") // Course Complete Text, Bowser Courses
+#define TEXT_HUD_CURRENT_RATIO_43 _("CURRENT ASPECT RATIO: 4:3. PRESS L TO SWITCH TO 16:9")
+#define TEXT_HUD_CURRENT_RATIO_169 _("CURRENT ASPECT RATIO: 16:9. PRESS L TO SWITCH TO 4:3")
 
 #if defined(VERSION_JP) || defined(VERSION_SH)
 

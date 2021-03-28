@@ -1672,6 +1672,7 @@ s8 gDialogCourseActNum = 1;
 #define DIAG_VAL2 240 // JP & US
 #endif
 
+extern s32 widescreen;
 void render_dialog_entries(void) {
 #ifdef VERSION_EU
     s8 lowerBound;
@@ -2199,6 +2200,8 @@ void render_pause_my_score_coins(void) {
 #else
     u8 textCourse[] = { TEXT_COURSE };
     u8 textMyScore[] = { TEXT_MY_SCORE };
+    u8 textCurrRatio43[] = { TEXT_HUD_CURRENT_RATIO_43 };
+    u8 textCurrRatio169[] = { TEXT_HUD_CURRENT_RATIO_169 };
 #endif
     u8 textStar[] = { TEXT_STAR };
     u8 textUnfilledStar[] = { TEXT_UNFILLED_STAR };
@@ -2266,7 +2269,15 @@ void render_pause_my_score_coins(void) {
         print_generic_string(get_string_width(gTextCourseArr[gInGameLanguage]) + 51, 157, strCourseNum);
 #else
         //print_generic_string(CRS_NUM_X1, 157, strCourseNum);
+        if (widescreen == 0) {
+            print_generic_string(10, 20, textCurrRatio43);
+        }
+        else {
+            print_generic_string(10, 20, textCurrRatio169);
+        }
+        
 #endif
+
 
         actName = segmented_to_virtual(actNameTbl[(gCurrCourseNum - 1) * 6 + gDialogCourseActNum - 1]);
 
@@ -2626,7 +2637,14 @@ s16 render_pause_courses_and_castle(void) {
             shade_screen();
             render_pause_my_score_coins();
             render_pause_red_coins();
-
+        if (gPlayer1Controller->buttonPressed & L_TRIG){
+                if (widescreen == 0){
+                    widescreen = 1;
+                }
+                else{
+                    widescreen = 0;
+                }
+            }
             /*if (gMarioStates[0].action & ACT_FLAG_PAUSE_EXIT) {
                 render_pause_course_options(99, 93, &gDialogLineNum, 15);
             }*/
