@@ -106,8 +106,13 @@ MarioHackJams\n\
 There will also be a\n\
 website in the future\n\
 at mariojams.com\n\
-I hope you enjoy the\n\
-hack!"))
+\n\
+\n\
+As a final note, this\n\
+hack supports multiple\n\
+aspects ratios. Pause\n\
+The game and change\n\
+it by pressing L. Enjoy!"))
 
 DEFINE_DIALOG(DIALOG_007, 1, 7, 30, 200, _("\
 The Hot Volcano is\n\
