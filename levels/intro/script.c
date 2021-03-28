@@ -32,7 +32,7 @@ const LevelScript level_intro_splash_screen[] = {
 
     // Start animation
     LOAD_AREA(/*area*/ 1),
-
+    EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_mario_head_regular),
     CALL(/*arg*/ 0, /*func*/ lvl_intro_update),
     SLEEP(/*frames*/ 75),
     TRANSITION(/*transType*/ WARP_TRANSITION_FADE_INTO_COLOR, /*time*/ 16, /*color*/ 0x00, 0x00, 0x00),
@@ -54,10 +54,10 @@ const LevelScript level_intro_mario_head_regular[] = {
     AREA(/*index*/ 1, intro_geo_mario_head_regular),
     END_AREA(),
     FREE_LEVEL_POOL(),
-
     SLEEP(/*frames*/ 2),
     BLACKOUT(/*active*/ FALSE),
     LOAD_AREA(/*area*/ 1),
+    EXIT_AND_EXECUTE(/*seg*/ 0x14, _menuSegmentRomStart, _menuSegmentRomEnd, level_main_menu_entry_1),
     SET_MENU_MUSIC(/*seq*/ 0x0002),
     TRANSITION(/*transType*/ WARP_TRANSITION_FADE_FROM_STAR, /*time*/ 20, /*color*/ 0x00, 0x00, 0x00),
     SLEEP(/*frames*/ 20),

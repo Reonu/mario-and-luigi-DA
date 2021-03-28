@@ -3,8 +3,18 @@
 const GeoLayout ccm_area_7_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 0, -10000, ccm_dl_Plane_008_mesh_layer_1),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -2686, 0, -10000, ccm_dl_Plane_012_mesh_layer_1),
+		GEO_SWITCH_CASE(2, geo_switch_area),
+		GEO_OPEN_NODE(),
+			GEO_BRANCH(1, ccm_dl_zzz_geo),
+		GEO_CLOSE_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(1, 0, 0, -10000, ccm_dl_Snow_mesh_layer_1),
+	GEO_CLOSE_NODE(),
+	GEO_RETURN(),
+};
+const GeoLayout ccm_dl_zzz_geo[] = {
+	GEO_NODE_START(),
+	GEO_OPEN_NODE(),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -2686, 0, -10000, ccm_dl_zzz_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
