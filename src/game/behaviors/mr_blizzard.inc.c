@@ -92,7 +92,7 @@ static void mr_blizzard_act_spawn_snowball(void) {
 
 static void mr_blizzard_act_hide_unhide(void) {
 
-    if (o->oDistanceToMario < 2000.0f) {
+    if (o->oDistanceToMario < 1700.0f) {
         // If Mario is in range, move to rising action, make Mr. Blizzard visible,
         // make Mr. Blizzard tangible, and initialize GraphYVel.
         cur_obj_play_sound_2(SOUND_OBJ_SNOW_SAND2);
@@ -150,7 +150,7 @@ static void mr_blizzard_act_rotate(void) {
     // While Mr. Blizzard is on the ground, rotate toward Mario at
     // 8.4375 degrees/frame.
     if (o->oMoveFlags & OBJ_MOVE_MASK_ON_GROUND) {
-        cur_obj_rotate_yaw_toward(o->oAngleToMario, 0x800);
+        cur_obj_rotate_yaw_toward(o->oAngleToMario, 0x600);
 
         // Modify the ChangeInDizziness based on Mario's angle to Mr. Blizzard.
         angleDiff = o->oAngleToMario - o->oMoveAngleYaw;
@@ -189,12 +189,12 @@ static void mr_blizzard_act_rotate(void) {
                 cur_obj_become_intangible();
             }
             // If Mario gets too far away, move to burrow action and delete the snowball.
-        } else if (o->oDistanceToMario > 2500.0f) {
+        } else if (o->oDistanceToMario > 2200.0f) {
             o->oAction = MR_BLIZZARD_ACT_BURROW;
             o->oMrBlizzardChangeInDizziness = 300.0f;
             o->prevObj = o->oMrBlizzardHeldObj = NULL;
             // After 60 frames, if Mario is within 11.25 degrees of Mr. Blizzard, throw snowball action.
-        } else if (o->oTimer > 2 && abs_angle_diff(o->oAngleToMario, o->oMoveAngleYaw) < 0x800) {
+        } else if (o->oTimer > 30 && abs_angle_diff(o->oAngleToMario, o->oMoveAngleYaw) < 0x800) {
             o->oAction = MR_BLIZZARD_ACT_THROW_SNOWBALL;
         }
     }
@@ -417,8 +417,8 @@ static void mr_blizzard_snowball_act_1(void) {
     if (o->parentObj->prevObj == NULL) {
         if (o->parentObj->oAction == MR_BLIZZARD_ACT_THROW_SNOWBALL) {
             marioDist = o->oDistanceToMario;
-            if (marioDist > 1000.0f) {
-                marioDist = 1000.0f;
+            if (marioDist > 800.0f) {
+                marioDist = 800.0f;
             }
 
             // Launch the snowball relative to Mario's distance from the snowball.
