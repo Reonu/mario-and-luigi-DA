@@ -14,7 +14,7 @@ const GeoLayout ccm_area_7_geo[] = {
 const GeoLayout ccm_dl_zzz_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(1, -2686, 0, -10000, ccm_dl_zzz_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(1, -6086, 0, -10000, ccm_dl_zzz_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
