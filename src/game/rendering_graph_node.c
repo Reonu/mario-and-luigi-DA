@@ -262,6 +262,9 @@ static void geo_process_perspective(struct GraphNodePerspective *node) {
         case 3:
             aspect = 21.0f / 9.0f;
             break;
+        case 4:
+            aspect = 32.0f / 9.0f;
+            break;
         }
         
 #endif

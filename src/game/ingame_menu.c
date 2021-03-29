@@ -2204,6 +2204,7 @@ void render_pause_my_score_coins(void) {
     u8 textCurrRatio1610[] = { TEXT_HUD_CURRENT_RATIO_1610 };
     u8 textCurrRatio169[] = { TEXT_HUD_CURRENT_RATIO_169 };
     u8 textCurrRatio219[] = { TEXT_HUD_CURRENT_RATIO_219 };
+    u8 textCurrRatio329[] = { TEXT_HUD_CURRENT_RATIO_329 };
     u8 textWideInfo[] = { TEXT_HUD_WIDE_INFO };
     u8 textWideInfo2[] = { TEXT_HUD_WIDE_INFO2 };
 #endif
@@ -2292,6 +2293,10 @@ void render_pause_my_score_coins(void) {
                 print_generic_string(10, 80, textWideInfo);
                 print_generic_string(10, 60, textWideInfo2);
                 break;
+            case 4: 
+                print_generic_string(10, 20, textCurrRatio329);
+                print_generic_string(10, 80, textWideInfo);
+                print_generic_string(10, 60, textWideInfo2);
         }
 #endif
 
@@ -2655,7 +2660,7 @@ s16 render_pause_courses_and_castle(void) {
             render_pause_my_score_coins();
             render_pause_red_coins();
         if (gPlayer1Controller->buttonPressed & L_TRIG){
-                widescreen = (widescreen + 1) % 4;
+                widescreen = (widescreen + 1) % 5;
             }
             /*if (gMarioStates[0].action & ACT_FLAG_PAUSE_EXIT) {
                 render_pause_course_options(99, 93, &gDialogLineNum, 15);
