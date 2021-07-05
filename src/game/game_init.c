@@ -66,6 +66,7 @@ u8 gIsConsole;
 #ifdef WIDE
 u8 gWidescreen;
 #endif
+u16 gSpeedrunTimer;
 
 u16 sCurrFBNum = 0;
 u16 frameBufferIndex = 0;

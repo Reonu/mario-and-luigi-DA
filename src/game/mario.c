@@ -33,6 +33,8 @@
 #include "sound_init.h"
 #include "rumble_init.h"
 
+#include "gfx_dimensions.h"
+
 u32 unused80339F10;
 s8 filler80339F1C[20];
 
@@ -1816,6 +1818,20 @@ extern s16 s8DirModeBaseYaw;
         update_mario_health(gMarioState);
         update_mario_info_for_cam(gMarioState);
         mario_update_hitbox_and_cap_model(gMarioState);
+
+        if (gCurrLevelNum == LEVEL_CCM) {
+            gSpeedrunTimer++;
+        }
+
+        
+        u16 timerMinutes = gSpeedrunTimer / (30 * 60);
+        u16 timerSeconds = (gSpeedrunTimer - (timerMinutes * 1800)) / 30;
+        u16 fracSecs = ((gSpeedrunTimer - (timerMinutes * 1800) - (timerSeconds * 30)) & 0xFFFF) / 3;
+
+            print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(170), 200, "TIME");
+            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(111), 200, "%0d", timerMinutes);
+            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(91), 200, "%02d", timerSeconds);
+            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(57), 200, "%d", fracSecs);
 
         // Both of the wind handling portions play wind audio only in
         // non-Japanese releases.
