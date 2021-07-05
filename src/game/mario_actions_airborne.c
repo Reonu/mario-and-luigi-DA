@@ -110,7 +110,7 @@ s32 check_kick_or_dive_in_air(struct MarioState *m) {
 }
 
 s32 should_get_stuck_in_ground(struct MarioState *m) {
-    u32 terrainType = m->area->terrainType & TERRAIN_MASK;
+    /*u32 terrainType = m->area->terrainType & TERRAIN_MASK;
     struct Surface *floor = m->floor;
     s32 flags = floor->flags;
     s32 type = floor->type;
@@ -120,7 +120,7 @@ s32 should_get_stuck_in_ground(struct MarioState *m) {
         if (!(flags & 0x01) && m->peakHeight - m->pos[1] > 1000.0f && floor->normal.y >= 0.8660254f) {
             return TRUE;
         }
-    }
+    }*/
 
     return FALSE;
 }
