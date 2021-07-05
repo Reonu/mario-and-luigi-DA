@@ -30,6 +30,8 @@
 #include "course_table.h"
 #include "rumble_init.h"
 
+#include "config.h"
+
 #define PLAY_MODE_NORMAL 0
 #define PLAY_MODE_PAUSED 2
 #define PLAY_MODE_CHANGE_AREA 3
@@ -761,9 +763,11 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 break;
 
             case WARP_OP_DEATH:
+            #ifndef DISABLE_LIVES
                 if (m->numLives == 0) {
                     sDelayedWarpOp = WARP_OP_GAME_OVER;
                 }
+            #endif
                 sDelayedWarpTimer = 48;
                 sSourceWarpNodeId = WARP_NODE_DEATH;
                 play_transition(WARP_TRANSITION_FADE_INTO_BOWSER, 0x30, 0x00, 0x00, 0x00);
@@ -1058,7 +1062,7 @@ s32 play_mode_paused(void) {
         if (gDebugLevelSelect) {
             fade_into_special_warp(-9, 1);
         } else {
-            initiate_warp(LEVEL_CASTLE, 1, 0x1F, 0);
+            initiate_warp(EXIT_COURSE_LEVEL, EXIT_COURSE_AREA, EXIT_COURSE_NODE, 0);
             fade_into_special_warp(0, 0);
             gSavedCourseNum = COURSE_NONE;
         }
@@ -1222,16 +1226,30 @@ s32 init_level(void) {
 
         if (gCurrentArea != NULL) {
             reset_camera(gCurrentArea->camera);
-
-            if (gCurrDemoInput != NULL) {
-    set_mario_action(gMarioState, ACT_IDLE, 0);
-} else if (gDebugLevelSelect == 0) {
-    if (gMarioState->action != ACT_UNINITIALIZED) {
+#ifdef PEACH_SKIP
+        if (gCurrDemoInput != NULL) {
             set_mario_action(gMarioState, ACT_IDLE, 0);
-    }
-}
+        } else if (gDebugLevelSelect == 0) {
+            if (gMarioState->action != ACT_UNINITIALIZED) {
+                    set_mario_action(gMarioState, ACT_IDLE, 0);
+            }
         }
-
+    }
+#else
+        if (gCurrDemoInput != NULL) {
+            set_mario_action(gMarioState, ACT_IDLE, 0);
+        } else if (gDebugLevelSelect == 0) {
+            if (gMarioState->action != ACT_UNINITIALIZED) {
+                if (save_file_exists(gCurrSaveFileNum - 1)) {
+                    set_mario_action(gMarioState, ACT_IDLE, 0);
+                } else {
+                    set_mario_action(gMarioState, ACT_INTRO_CUTSCENE, 0);
+                    val4 = 1;
+                }
+            }
+        }
+    }
+#endif
         if (val4 != 0) {
             play_transition(WARP_TRANSITION_FADE_FROM_COLOR, 0x5A, 0xFF, 0xFF, 0xFF);
         } else {
@@ -1293,8 +1311,11 @@ s32 lvl_init_from_save_file(UNUSED s16 arg0, s32 levelNum) {
 #endif
     sWarpDest.type = WARP_TYPE_NOT_WARPING;
     sDelayedWarpOp = WARP_OP_NONE;
+#ifdef CASTLE_MUSIC_FIX
+    gNeverEnteredCastle = 0;
+#else
     gNeverEnteredCastle = !save_file_exists(gCurrSaveFileNum - 1);
-
+#endif
     gCurrLevelNum = levelNum;
     gCurrCourseNum = COURSE_NONE;
     gSavedCourseNum = COURSE_NONE;

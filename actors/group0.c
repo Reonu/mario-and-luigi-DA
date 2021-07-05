@@ -63,3 +63,7 @@
 #include "luiginpcbye/model.inc.c"
 #include "luiginpcbye/anims/data.inc.c"
 #include "luiginpcbye/anims/table.inc.c"
+#ifdef S2DEX_TEXT_ENGINE
+#include "src/s2d_engine/config.h"
+#include FONT_C_FILE
+#endif
