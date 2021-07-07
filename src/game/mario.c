@@ -1284,7 +1284,9 @@ void update_mario_button_inputs(struct MarioState *m) {
     if (m->controller->buttonDown & A_BUTTON) {
         m->input |= INPUT_A_DOWN;
     }
-
+    if ((gSpeedrunTimer < 2) && (m->controller->buttonDown & D_JPAD))
+        gWidescreen = 1;
+        
     // Don't update for these buttons if squished.
     if (m->squishTimer == 0) {
         if (m->controller->buttonPressed & B_BUTTON) {
