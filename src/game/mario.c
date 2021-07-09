@@ -1820,24 +1820,7 @@ extern s16 s8DirModeBaseYaw;
         update_mario_health(gMarioState);
         update_mario_info_for_cam(gMarioState);
         mario_update_hitbox_and_cap_model(gMarioState);
-
-        if (gCurrLevelNum == LEVEL_CCM || gCurrAreaIndex != 0x03) {
-            gSpeedrunTimer++;
-        }
-
-        
-        u64 timerMinutes = gSpeedrunTimer / (30 * 60);
-        u64 timerSeconds = (gSpeedrunTimer - (timerMinutes * 1800)) / 30;
-        u64 fracSecs = ((gSpeedrunTimer - (timerMinutes * 1800) - (timerSeconds * 30)) & 0xFFFF) / 3;
-        if (timerMinutes < 100) {
-            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(102), 210, "%02d", timerMinutes);
-        } else {
-            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(113), 210, "%02d", timerMinutes);
-        }
-        
-        print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(71), 210, "%02d", timerSeconds);
-        print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(37), 210, "%d", fracSecs);
-
+    
         // Both of the wind handling portions play wind audio only in
         // non-Japanese releases.
         if (gMarioState->floor->type == SURFACE_HORIZONTAL_WIND) {

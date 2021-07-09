@@ -12,6 +12,7 @@
 #include "sm64.h"
 #include "game_init.h"
 #include "engine/extended_bounds.h"
+#include "level_update.h"
 
 #include "config.h"
 
@@ -290,8 +291,7 @@ static void geo_process_ortho_projection(struct GraphNodeOrthoProjection *node) 
 /**
  * Process a perspective projection node.
  */
-extern s32 widescreen = 0;
-
+extern void dividetimer(int timer, int *minute, int *second, int *centisecond);
 static void geo_process_perspective(struct GraphNodePerspective *node) {
     if (node->fnNode.func != NULL) {
         node->fnNode.func(GEO_CONTEXT_RENDER, &node->fnNode.node, gMatStack[gMatStackIndex]);
@@ -318,6 +318,24 @@ static void geo_process_perspective(struct GraphNodePerspective *node) {
         gCurGraphNodeCamFrustum = node;
         geo_process_node_and_siblings(node->fnNode.node.children);
         gCurGraphNodeCamFrustum = NULL;
+
+        if ((gCurrLevelNum == LEVEL_CCM || gCurrAreaIndex != 0x03) && (gCurrLevelNum != 0x01)) {
+            gSpeedrunTimer++;
+        }
+        
+        int timerMinutes;
+        int timerSeconds;
+        int timerCentiseconds;
+        dividetimer(gSpeedrunTimer, &timerMinutes, &timerSeconds, &timerCentiseconds);
+        if (timerMinutes < 100) {
+            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(122), 210, "%02d", timerMinutes);
+        } else {
+            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(133), 210, "%02d", timerMinutes);
+        }
+        
+        print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(91), 210, "%02d", timerSeconds);
+        print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(57), 210, "%02d", timerCentiseconds);
+
     }
 }
 

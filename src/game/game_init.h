@@ -45,7 +45,7 @@ extern u8 gIsConsole;
 #ifdef WIDE
 extern u8 gWidescreen;
 #endif
-extern u64 gSpeedrunTimer;
+extern u32 gSpeedrunTimer;
 #ifdef EEP
 extern s8 gEepromProbe;
 #endif
